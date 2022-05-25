@@ -78,3 +78,5 @@ def is_valid_isbn13(code):
         print("Invalid")
         return result
 
+value = input("Please enter your ISBN: ")
+is_valid_isbn(value)
