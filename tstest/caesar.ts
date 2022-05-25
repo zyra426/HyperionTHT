@@ -49,4 +49,4 @@ const caesar_cipher = (T: string, shift: number) => {
 
 //printing the output to terminal to test for correct output
 //should print THE QUICK BROWN DOG JUMPED OVER THE LAZY FOX.
-console.log(caesar_cipher('GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.', 39));
+print(caesar_cipher('GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.', 39));
