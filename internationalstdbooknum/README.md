@@ -12,7 +12,7 @@
 I would argue that this solution follows the linear complexity and is thus O(n).
 
 ### Example 
-```
+```python
 def is_valid_isbn13(code):
     result = 0
 
