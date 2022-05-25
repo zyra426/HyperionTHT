@@ -2,7 +2,7 @@ import re
 
 def is_valid_isbn(code):
     # replace characters and spaces with no value strings
-    code = code.replace("-", "").replace(" ", "")
+    code = code.replace('-', '').replace(' ', '')
     
     # Figure out which function to run based on ISBN length
     return {
@@ -17,7 +17,7 @@ def isOdd(x):
 # calculate the check digit for converting ISBN-10 to ISBN-13
 def calcCheckDigit(code):
     result = -1
-    code.replace("-", "").replace(" ", "")
+    code.replace('-', '').replace(' ', '')
     sum = 0
 
     for i in range(len(code)):
@@ -52,10 +52,10 @@ def is_valid_isbn10(code):
         
         # Validating ISBN-10 and converting to ISBN-13
         if result:
-            print("Valid")
+            print('Valid')
             code = code[:len(code) - 1]
 
-            result = "978" + code
+            result = '978' + code
             result += str(calcCheckDigit(result))
 
             # Checking if the converted ISBN-13 code is valid
@@ -64,7 +64,7 @@ def is_valid_isbn10(code):
                 return result
         
         else:
-            print("Invalid")
+            print('Invalid')
 
 # Function for validating ISBN-13
 def is_valid_isbn13(code):
@@ -82,13 +82,13 @@ def is_valid_isbn13(code):
         result = sum % 10 == 0
 
     if result:
-        print("Valid")
+        print('Valid')
         return result
     
     else:
-        print("Invalid")
+        print('Invalid')
         return result
 
 # Enabling input of ISBN code through CLI
-value = input("Please enter your ISBN: ")
+value = input('Please enter your ISBN:\n')
 is_valid_isbn(value)

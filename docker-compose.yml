@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hyperiontht:
+    image: hyperiontht
+    build:
+      context: .
+      dockerfile: ./Dockerfile
