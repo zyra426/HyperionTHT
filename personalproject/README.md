@@ -1,2 +1,2 @@
 ### Link to personal project
-[productclone](https://github.com/zyra426/pig-latin)
+[pig-latin](https://github.com/zyra426/pig-latin)
