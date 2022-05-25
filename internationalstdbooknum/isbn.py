@@ -11,18 +11,18 @@ def is_valid_isbn(code):
     }.get(len(code), lambda n: False)(code)
 
 # Determine wheher an index position is odd or even
-def isOdd(x):
+def is_odd(x):
     return x % 2 != 0
 
 # calculate the check digit for converting ISBN-10 to ISBN-13
-def calcCheckDigit(code):
+def calc_check_digit(code):
     result = -1
     code.replace('-', '').replace(' ', '')
     sum = 0
 
     for i in range(len(code)):
         digit = int(code[i])
-        sum += digit * (3 if isOdd(i) else 1)
+        sum += digit * (3 if is_odd(i) else 1)
 
     result = (10 - sum % 10) % 10
 
@@ -56,7 +56,7 @@ def is_valid_isbn10(code):
             code = code[:len(code) - 1]
 
             result = '978' + code
-            result += str(calcCheckDigit(result))
+            result += str(calc_check_digit(result))
 
             # Checking if the converted ISBN-13 code is valid
             if is_valid_isbn13(result):
@@ -77,7 +77,7 @@ def is_valid_isbn13(code):
         # Multiplying values by 1 if index position is even and 3 if index position is odd
         for i in range(len(code)):
             digit = int(code[i])
-            sum += digit * (3 if isOdd(i) else 1)
+            sum += digit * (3 if is_odd(i) else 1)
 
         result = sum % 10 == 0
 
