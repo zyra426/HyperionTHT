@@ -37,6 +37,6 @@ def is_valid_isbn13(code):
 ```
 
 
-In the above-given code, the array consists of n integer elements. So, the space occupied by the array is 4 * n. Also we have integer variables such as n, i and sum. Assuming 4 bytes for each variable, the total space occupied by the program is 4n + 16 bytes. Since the highest order of n in the equation 4n + 16 is n, so the space complexity is O(n) or linear.
+In the above given code, the array consists of n integer elements. The space occupied by the array is 4 * n. We have integer variables such as digit, i, result, and sum. Assuming 4 bytes for each variable, the total space occupied by the program is 4n + 16 bytes. The highest order of n in the equation 4n + 16 is n, so the space complexity is O(n) or linear.
 
  
